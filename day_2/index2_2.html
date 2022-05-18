@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Rest parameter</h1>
+    <script type="text/javascript">
+        function test(x,...y){
+            document.write(`<p>x=${x},y=${y}</p>`)
+        }
+        //calling test() without argument is not an error
+        test();//x-undefined y-it will be empty
+        //calling with test(2) is not an error
+        test(2);
+        //calling with test test(2,3) is not an error
+        test(2,3);
+        //calling with test(2,3,4)is also fine but lst input is lost
+        test(1,5,4); 
+    </script>
+</body>
+</html>
