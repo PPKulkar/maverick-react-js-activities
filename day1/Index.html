@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <H1>hELLO wORLD</H1>
+    <div id="main">This is a div element </div>
+    <button onclick="test()">Click</button>
+
+    <SCRIPT type="text/javascript">
+        function test(){
+            //document.getElementById('main');-returns element havig id main
+            var ele=document.getElementById('main');
+            ele.innerHTML='hello element';
+        }
+        for(var x=0;x<10;x++){
+            document.write('<p>x='+x+'</p>');
+            if(x==5){
+                var y=20;
+            }
+        }
+       document.write("<p> y outside if condition : "+y+"</p>");
+       document.write("<p>window.x= "+window.x+"</p>");
+       document.write("<p>window.y= "+window.y+"</p>");
+       class person{
+           contructor(name,age){
+               this.name=name;
+               this.age=age;
+           }
+           disp(){
+               document.write(`<p>Name=${this.name},Age=${this.age}</p>`)
+           }}
+           class Employee extends person{
+               constructor(id,name,age){
+                   super(name,age);//passes name & age to initialze for Employee
+                   this.id=id;
+               }
+
+           }
+           let e=new Employee(100,"Rajesh",34);
+           e.disp();
+    </SCRIPT>
+</body>
+</html>

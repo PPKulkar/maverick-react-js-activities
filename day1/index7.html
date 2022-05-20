@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        function person(name,age){
+            this.name=name;
+            this.age=age;
+        }
+        person.prototype.disp=function(){
+            document.write(`<p>Name=${this.name},Age=${this.age}</p>`)
+
+        }
+        function Employee(id,name,age){
+            person.call(this,name,age);
+            this.id=id;
+        }
+        Employee.prototype=Object.create(person.prototype);
+        let e=new Employee(100,"Raj",44);
+        e.disp();
+
+    </script>
+    
+</body>
+</html>
